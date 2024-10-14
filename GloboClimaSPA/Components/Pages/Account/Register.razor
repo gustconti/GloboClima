@@ -1,0 +1,68 @@
+@page "/account/register"
+@using GloboClimaSPA.Models
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.JSInterop
+@using GloboClimaSPA.Interfaces
+@inject IAuthService AuthService
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+
+<h3>Register</h3>
+
+<EditForm Model="@registerModel" OnValidSubmit="RegisterUser">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <InputText id="email" class="form-control" @bind-Value="registerModel.Email" />
+        <ValidationMessage For="@(() => registerModel.Email)" />
+    </div>
+
+    <div class="mb-3">
+        <label for="password" class="form-label">Senha</label>
+        <InputText id="password" class="form-control" type="password" @bind-Value="registerModel.Password" />
+        <ValidationMessage For="@(() => registerModel.Password)" />
+    </div>
+
+    <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirmar Senha</label>
+        <InputText id="confirmPassword" class="form-control" type="password" @bind-Value="registerModel.ConfirmPassword" />
+        <ValidationMessage For="@(() => registerModel.ConfirmPassword)" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Criar Conta</button>
+</EditForm>
+
+@code {
+    private RegisterUserModel registerModel = new RegisterUserModel();
+    private string confirmationCode = "";  // To store confirmation code
+
+    private async Task RegisterUser()
+    {
+        var result = await AuthService.RegisterUserAsync(registerModel);
+        if (result)
+        {
+            // After successful registration, prompt the user for the confirmation code
+            // You could redirect them to a confirmation page or show a prompt directly
+            await JSRuntime.InvokeVoidAsync("alert", "Registration successful! Please check your email for the confirmation code.");
+        }
+        else
+        {
+            await JSRuntime.InvokeVoidAsync("alert", "Registration failed.");
+        }
+    }
+
+    private async Task ConfirmUser()
+    {
+        var result = await AuthService.ConfirmUserAsync(registerModel.Email, confirmationCode);
+        if (result)
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+        else
+        {
+            await JSRuntime.InvokeVoidAsync("alert", "Confirmation failed.");
+        }
+    }
+}

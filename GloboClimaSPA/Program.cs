@@ -1,4 +1,9 @@
+using GloboClimaSPA.Services;
+using GloboClimaSPA.Interfaces;
+using Amazon.CognitoIdentityProvider;
 using GloboClimaSPA.Components;
+using Microsoft.AspNetCore.Components.Authorization;
+using Blazored.LocalStorage;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,8 +45,13 @@ else
 }
 
 // Add services to the container
+builder.Services.AddDefaultAWSOptions(builder.Configuration.GetAWSOptions());
+builder.Services.AddAWSService<IAmazonCognitoIdentityProvider>();
+builder.Services.AddScoped<AuthenticationStateProvider, AuthenticationStateService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+    .AddInteractiveServerComponents();    
 
 var app = builder.Build();
 
