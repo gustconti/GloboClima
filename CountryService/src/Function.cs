@@ -1,3 +1,4 @@
+using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
@@ -9,13 +10,19 @@ public class Function
 {
     
     /// <summary>
-    /// A simple function that takes a string and does a ToUpper
+    /// Function that takes a string and returns Countries with names that contain it.
     /// </summary>
     /// <param name="input">The event for the Lambda function handler to process.</param>
     /// <param name="context">The ILambdaContext that provides methods for logging and describing the Lambda environment.</param>
-    /// <returns></returns>
-    public string FunctionHandler(string input, ILambdaContext context)
+    /// <returns>
+    /// </returns>
+    public async Task<APIGatewayProxyResponse> FindCountriesByName(APIGatewayProxyRequest input, ILambdaContext context)
     {
-        return input.ToUpper();
+        // Your API calling logic here
+        return new APIGatewayProxyResponse
+        {
+            StatusCode = 200,
+            Body = "Lambda function executed"
+        };
     }
 }
