@@ -3,3 +3,4 @@ obj/
 .vs/
 wwwroot/
 node_modules/
+Properties/launchSettings.json
