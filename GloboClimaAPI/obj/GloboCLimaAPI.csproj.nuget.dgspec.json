@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\conti\\OneDrive\\Área de Trabalho\\JobTests\\AuvoTest\\GloboCLimaAPI\\GloboCLimaAPI.csproj": {}
+    "C:\\Users\\conti\\OneDrive\\Área de Trabalho\\JobTests\\AuvoTest\\GloboClimaAPI\\GloboClimaAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\conti\\OneDrive\\Área de Trabalho\\JobTests\\AuvoTest\\GloboCLimaAPI\\GloboCLimaAPI.csproj": {
+    "C:\\Users\\conti\\OneDrive\\Área de Trabalho\\JobTests\\AuvoTest\\GloboClimaAPI\\GloboClimaAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\conti\\OneDrive\\Área de Trabalho\\JobTests\\AuvoTest\\GloboCLimaAPI\\GloboCLimaAPI.csproj",
-        "projectName": "GloboCLimaAPI",
-        "projectPath": "C:\\Users\\conti\\OneDrive\\Área de Trabalho\\JobTests\\AuvoTest\\GloboCLimaAPI\\GloboCLimaAPI.csproj",
+        "projectUniqueName": "C:\\Users\\conti\\OneDrive\\Área de Trabalho\\JobTests\\AuvoTest\\GloboClimaAPI\\GloboClimaAPI.csproj",
+        "projectName": "GloboClimaAPI",
+        "projectPath": "C:\\Users\\conti\\OneDrive\\Área de Trabalho\\JobTests\\AuvoTest\\GloboClimaAPI\\GloboClimaAPI.csproj",
         "packagesPath": "C:\\Users\\conti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\conti\\OneDrive\\Área de Trabalho\\JobTests\\AuvoTest\\GloboCLimaAPI\\obj\\",
+        "outputPath": "C:\\Users\\conti\\OneDrive\\Área de Trabalho\\JobTests\\AuvoTest\\GloboClimaAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\conti\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +43,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AWSSDK.CognitoIdentityProvider": {
+              "target": "Package",
+              "version": "[3.7.403.14, )"
+            },
+            "AWSSDK.DynamoDBv2": {
+              "target": "Package",
+              "version": "[3.7.401.11, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.10, )"

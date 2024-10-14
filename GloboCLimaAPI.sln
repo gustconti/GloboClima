@@ -3,17 +3,32 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboCLimaAPI", "GloboCLimaAPI\GloboCLimaAPI.csproj", "{07AF271C-93BA-4293-BE15-213D708F0FBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboClimaAPI", "GloboClimaAPI\GloboClimaAPI.csproj", "{07AF271C-93BA-4293-BE15-213D708F0FBB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboClimaSPA", "GloboClimaSPA\GloboClimaSPA.csproj", "{7C2CB859-E5FC-4372-B5B8-A05D49D33038}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CityService", "CityService", "{C2CC8332-656F-42F0-99A9-F4D886E89BB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8728E28A-F2CA-432B-91B8-9693E60E7D7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityService", "CityService\src\CityService\CityService.csproj", "{7FE8FFA7-5EF9-450D-83EF-F232E54CABD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CountryService", "CountryService", "{126ABF02-5EB7-4D9C-8E12-7CA3C1DF42CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{40050123-1AA9-41B2-BE41-D9518564ADB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryService", "CountryService\src\CountryService\CountryService.csproj", "{6CF5F499-3809-4D9F-88F0-1ADCA4B6E17F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeatherService", "WeatherService", "{1A905A74-4DEF-4D90-B963-FF84AA80D75D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{219AF7AC-9437-4C47-BD18-085A18FBDF0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherService", "WeatherService\src\WeatherService\WeatherService.csproj", "{7074D5CB-F597-4DCD-B567-C9AEC149D497}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{07AF271C-93BA-4293-BE15-213D708F0FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +39,28 @@ Global
 		{7C2CB859-E5FC-4372-B5B8-A05D49D33038}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C2CB859-E5FC-4372-B5B8-A05D49D33038}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C2CB859-E5FC-4372-B5B8-A05D49D33038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FE8FFA7-5EF9-450D-83EF-F232E54CABD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE8FFA7-5EF9-450D-83EF-F232E54CABD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE8FFA7-5EF9-450D-83EF-F232E54CABD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE8FFA7-5EF9-450D-83EF-F232E54CABD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF5F499-3809-4D9F-88F0-1ADCA4B6E17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF5F499-3809-4D9F-88F0-1ADCA4B6E17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF5F499-3809-4D9F-88F0-1ADCA4B6E17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF5F499-3809-4D9F-88F0-1ADCA4B6E17F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7074D5CB-F597-4DCD-B567-C9AEC149D497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7074D5CB-F597-4DCD-B567-C9AEC149D497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7074D5CB-F597-4DCD-B567-C9AEC149D497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7074D5CB-F597-4DCD-B567-C9AEC149D497}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8728E28A-F2CA-432B-91B8-9693E60E7D7B} = {C2CC8332-656F-42F0-99A9-F4D886E89BB1}
+		{7FE8FFA7-5EF9-450D-83EF-F232E54CABD9} = {8728E28A-F2CA-432B-91B8-9693E60E7D7B}
+		{40050123-1AA9-41B2-BE41-D9518564ADB4} = {126ABF02-5EB7-4D9C-8E12-7CA3C1DF42CE}
+		{6CF5F499-3809-4D9F-88F0-1ADCA4B6E17F} = {40050123-1AA9-41B2-BE41-D9518564ADB4}
+		{219AF7AC-9437-4C47-BD18-085A18FBDF0A} = {1A905A74-4DEF-4D90-B963-FF84AA80D75D}
+		{7074D5CB-F597-4DCD-B567-C9AEC149D497} = {219AF7AC-9437-4C47-BD18-085A18FBDF0A}
 	EndGlobalSection
 EndGlobal
